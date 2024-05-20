@@ -18,6 +18,8 @@
   stdenvNoCC,
   symlinkJoin,
   vulkan-loader,
+  libglvnd,
+  xorg,
   pipewire_latency ? "64/48000", # reasonable default
   gmrun_enable ? true, # keep this flag for compatibility
   command_prefix ?
@@ -52,6 +54,8 @@
       numactl
       openssl
       vulkan-loader
+      libglvnd
+      xorg.libXi
     ];
     nativeBuildInputs = [
       autoPatchelfHook
