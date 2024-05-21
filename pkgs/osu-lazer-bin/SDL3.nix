@@ -18,6 +18,7 @@
   dbus,
   ibus,
   libiconv,
+  alsa-lib,
   ...
 }:
 stdenv.mkDerivation (final: {
@@ -46,6 +47,7 @@ stdenv.mkDerivation (final: {
     libpulseaudio
     libdecor
     dbus
+    alsa-lib
   ];
 
   buildInputs = [libiconv ibus wayland-protocols] ++ final.dlopenBuildInputs;
